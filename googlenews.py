@@ -61,7 +61,7 @@ def create_wordcloud(text):
     wc.generate(text)
     wc.to_file(os.path.join(currdir,'wc.png'))
 
-create_wordcloud(text)
+create_wordcloud(text) 
 
 
 
