@@ -41,10 +41,7 @@ def processText(webpage):
 
 #Извлечение текста по кажой новостной ссылке и объединение всех новостей в один текст 
 text = ''
-i = 0
 for link in link_list:
-    i += 1
-    print(i,)
     news_list = processText(link)
     text += (' ').join(news_list)
 
