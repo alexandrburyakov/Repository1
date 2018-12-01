@@ -98,3 +98,7 @@ def create_wordcloud(text):
     wc.to_file(os.path.join(currdir,'wc.png'))
 
 create_wordcloud((' ').join(words))
+
+"""
+результат выполнения программы: файл Repository1/wc.png
+"""
