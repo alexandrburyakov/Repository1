@@ -1,3 +1,9 @@
+"""
+С сайта google news (https://news.google.com) (язык и регион - English | United States) прокачиваются все статьи 
+за последний месяц (на момент прокачки) с ключевым словом Russia.
+Затем для скачанных статей на основе топ-50 наиболее частотных слов создается word cloud.
+"""
+
 from datetime import datetime, timedelta
 from bs4 import BeautifulSoup as soup
 from urllib.request import urlopen
