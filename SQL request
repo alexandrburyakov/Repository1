@@ -1,5 +1,5 @@
 #Дана SQL база с таблицами: 1) Users(userId, age) 2) Purchases (purchaseId, userId, itemId, date) 3) Items (itemId, price). 
-#Далее написан SQL запрос (Access), который строит таблицу со средней суммарной стоимостью покупок пользователя в каждом месяце.
+#Ниже написан SQL запрос (Access), который строит таблицу со средней суммарной стоимостью покупок пользователя в каждом месяце.
 
 SELECT userId, mon, avg(sum_price) AS avg_price
 FROM (SELECT p.userId AS userId, Format(p.date, "yyyy mm") AS mon, p.purchaseId AS purchace, sum(price) AS sum_price 
