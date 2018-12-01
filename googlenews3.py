@@ -100,5 +100,5 @@ def create_wordcloud(text):
 create_wordcloud((' ').join(words))
 
 """
-результат выполнения программы: файл Repository1/wc.png
+Результат выполнения программы: файл Repository1/wc.png
 """
