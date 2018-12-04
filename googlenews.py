@@ -90,15 +90,14 @@ stopwrds = STOPWORDS
 stopwrds.add('will')
 def create_wordcloud(text):
     #cloudmask = array(Image.open(os.path.join(currdir, 'cloud.png'))) 
-    wc =  WordCloud(max_words = 50,
+    wordcloud =  WordCloud(max_words = 50,
 		    background_color = 'white',
                     stopwords = stopwrds,)
                     #mask = cloudmask)
-    wc.generate(text)
-    wc.to_file(os.path.join(currdir,'wc.png'))
+    wordcloud.generate(text)
+    wordcloud.to_file(os.path.join(currdir,'wordcloud.png'))
 
 create_wordcloud((' ').join(words))
 
-"""
-Результат выполнения программы: файл Repository1/wc.png
-"""
+#Результат выполнения программы: файл Repository1/wordcloud.png
+
