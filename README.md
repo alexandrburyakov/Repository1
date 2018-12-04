@@ -1,1 +1,1 @@
-This Repository1 contains two python files (googlenews3.py, Num_dots.py) and one SQL request (file: SQL_request).
+This Repository1 contains two python files (googlenews3.py, num_dots.py) and one SQL request (file: SQL_request).
