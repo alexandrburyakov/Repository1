@@ -2,6 +2,8 @@
 С сайта google news (https://news.google.com) (язык и регион - English | United States) прокачиваются все статьи 
 за последний месяц (на момент прокачки) с ключевым словом Russia.
 Затем для скачанных статей на основе топ-50 наиболее частотных слов создается word cloud.
+
+Результат выполнения программы: файл Repository1/wordcloud.png
 """
 
 from datetime import datetime, timedelta
@@ -88,6 +90,7 @@ words = normWords(text)
 currdir = os.path.dirname(__file__)
 stopwrds = STOPWORDS
 stopwrds.add('will')
+stopwrds.add('said')
 def create_wordcloud(text):
     #cloudmask = array(Image.open(os.path.join(currdir, 'cloud.png'))) 
     wordcloud =  WordCloud(max_words = 50,
@@ -99,5 +102,5 @@ def create_wordcloud(text):
 
 create_wordcloud((' ').join(words))
 
-#Результат выполнения программы: файл Repository1/wordcloud.png
+
 
