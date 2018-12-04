@@ -1,5 +1,5 @@
 """
-Программа оценивает количество точек на изображении (Repository1/im111.png).
+Программа оценивает количество точек на изображении (Repository1/dots.png).
 На начальном этапе изображение переводится в формат оттенков серого(grayscale) и представляется в виде массива(np.array), который
 переводится в двоичный (binary) формат с использованием порогового значения (threshold), полученного путем нахождения
 среднего значения от максиамального и минимального значений элементов массива.(В общем случае величина порога может быть вычеслена
@@ -22,6 +22,7 @@ limit3 = limit1 + int((maxlabels_counter - limit1)*0.66), где maxlabels_count
 значение num_dots увеличивается на 3.
 Окончательное значение переменной num_dot - искомая оценка количества точек на изображении.
 """
+import os
 from urllib import request
 from collections import Counter
 from PIL import Image
@@ -29,8 +30,8 @@ from numpy import *
 from scipy.ndimage import measurements
 
 #Загрузка изображения 
-url = "https://lh5.googleusercontent.com/yO12GARP3fqmNOZ00zM9Q_nyBVWWfR_xVu8skrvAmhB1hzSJyq_F593jhQqS48aWJyCZ5jzDAQ=w513"
-img = request.urlopen(url)
+currdir = os.path.dirname(__file__)
+img = os.path.join(currdir,'dots.png')
 
 #Конвертирование в формат оттенков серого и преобразование в массив
 im = array(Image.open(img).convert('L'))
@@ -70,7 +71,7 @@ for k in range(1,max(labels)+1):
 
 print ('Num Dots =',num_dots)
 
-"""
-Результат выполнения программы: Num Dots = 726
-"""
+
+#Результат выполнения программы: Num Dots = 726
+
 
