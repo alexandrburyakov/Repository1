@@ -21,6 +21,8 @@ limit3 = limit1 + int((maxlabels_counter - limit1)*0.66), где maxlabels_count
 группу между limit2 и limit3 значение num_dots увеличивается на 2, а при попадании объекта в группу выше значение num_dots 
 значение num_dots увеличивается на 3.
 Окончательное значение переменной num_dot - искомая оценка количества точек на изображении.
+
+Результат выполнения программы: Num Dots = 726
 """
 import os
 from urllib import request
